@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'JetBrainsMono Nerd Font', monospace; /* Need to have JetBrainsMono Nerd Font installed on system to work properly */
+        }
+
+        body {
+            background-color: rgb(46, 52, 64);
+            color: rgb(129, 161, 193);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .greeting {
+            font-size: 60px;
+            margin-top: 10vh;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .navigation {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 135px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .nav-category {
+            background-color: rgb(59, 66, 82);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-header {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgb(216, 222, 233);
+            font-size: 18px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: rgb(76, 86, 106);
+        }
+    </style>
+</head>
+<body>
+    <section class="greeting">
+        Welcome $HOME
+    </section>
+    <section class="navigation">
+        <div class="nav-category">
+            <div class="nav-header">~/general</div>
+            <ul class="nav-links">
+                <li><a href="#link1">Link 1</a></li>
+                <li><a href="#link2">Link 2</a></li>
+                <li><a href="#link3">Link 3</a></li>
+            </ul>
+        </div>
+        <div class="nav-category">
+            <div class="nav-header">~/dev</div>
+            <ul class="nav-links">
+                <li><a href="#link4">Link 4</a></li>
+                <li><a href="#link5">Link 5</a></li>
+                <li><a href="#link6">Link 6</a></li>
+            </ul>
+        </div>
+        <div class="nav-category">
+            <div class="nav-header">~/links</div>
+            <ul class="nav-links">
+                <li><a href="#link7">Link 7</a></li>
+                <li><a href="#link8">Link 8</a></li>
+                <li><a href="#link9">Link 9</a></li>
+            </ul>
+        </div>
+        <!-- Add more categories as needed; they will wrap to the next row automatically -->
+    </section>
+</body>
+</html>
